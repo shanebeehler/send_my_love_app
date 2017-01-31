@@ -1,0 +1,30 @@
+.stats {
+  text-align: center;
+  font-weight: 100;
+  text-transform: capitalize;
+
+  div {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    margin: auto;
+
+    &:first-child, &:nth-child(2) {
+      border-bottom: 1px solid red;
+    }
+
+    p {
+      &:first-child {
+        font-size: 1.5em;
+        margin-top: 2em;
+      }
+      &:last-child {
+        background-color: black;
+        color: red;
+        font-size: 4em;
+        width: 30%;
+        margin: 0 auto 1em auto;
+      }
+    }
+  }
+}
