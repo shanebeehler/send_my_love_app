@@ -7,15 +7,15 @@ import PostsIndex from './containers/posts_index';
 import PostsNew from './containers/posts_new';
 import LocationFinder from './containers/location_finder';
 import Stats from './containers/stats';
+import Home from './components/home';
 import State from './state';
 
 require("../style/scss/styles.scss");
 
 export default (
   <Route path="/" component={App} >
-    <IndexRoute component={LocationFinder} />
+    <IndexRoute component={Home} />
     <Route path="/posts" component={PostsIndex} />
-    <Route path="/new" component={LocationFinder} />
     <Route path="/stats" component={Stats} />
   </Route>
 );

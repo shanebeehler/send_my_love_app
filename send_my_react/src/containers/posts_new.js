@@ -34,7 +34,7 @@ class PostsNew extends React.Component {
           <label>
             {this.props.location[0]}, {this.props.location[1]}
           </label>
-          <input className="button" type="submit" value="send my love"/>
+          <input className="button" type="submit" value="pass the love"/>
         </form>
     );
   }

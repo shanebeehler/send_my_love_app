@@ -1,3 +1,3 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :name, :location, :created_at
+  attributes :id, :name, :city, :country, :created_at
 end

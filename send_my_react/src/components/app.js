@@ -9,7 +9,9 @@ const App = (props) => {
       {/* <LocationFinder /> */}
       <FacebookLogin />
       <NavBar />
-      {props.children}
+      <div className="app">
+        {props.children}
+      </div>
     </div>
   );
 }

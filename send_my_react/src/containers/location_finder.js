@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { showPosition } from '../actions/index';
 import LocationDisplay from '../components/location_display';
 import PostsNew from './posts_new';
+import Welcome from '../components/welcome';
 import FacebookLoginDisplay from '../components/facebook_login_display';
 
 class LocationFinder extends Component {
@@ -21,16 +22,12 @@ class LocationFinder extends Component {
   render() {
     if (this.props.name === "Name") {
       return (
-        <div className="form-wrap">
-          <FacebookLoginDisplay />
-          <p>to send my love.</p>
-        </div>
+        <Welcome />
       );
     }
     else {
       return(
         <div className="form-wrap">
-          <FacebookLoginDisplay />
           <PostsNew name={this.props.name} location={this.props.location} />
         </div>
       );

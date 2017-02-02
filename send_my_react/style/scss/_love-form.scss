@@ -1,13 +1,14 @@
 .form-wrap {
-  text-align: center;
-  border: 1px solid red;
-  border-radius: 10px;
+  // text-align: center;
+  // border: 1px solid red;
+  border-radius: 1px;
   max-width: 85%;
   margin: auto;
-  background-color: white;
+  // background-color: white;
   padding: 5% 0;
-  min-height: 36em;
-  background-image: url('../../assets/heart.png');
+  // color: purple;
+  // min-height: 36em;
+  // background-image: url('../../assets/heart.png');
 
   // div {
   //   padding: 10% 0;
@@ -26,8 +27,8 @@
 
   label {
     display: block;
-    font-weight: 100;
-    font-size: 2em;
+    font-weight: 200;
+    font-size: 1.5em;
     margin-bottom: .2em;
     // display: none;
 
@@ -35,8 +36,10 @@
       padding-top: 1em;
     }
     &:nth-child(2) {
-      font-style: italic;
-      font-size: 1.5em;
+      font-family: 'Courgette';
+      color: #EF5C48;
+      font-size: 1em;
+      padding-left: 1em;
     }
   }
 
@@ -54,20 +57,20 @@
   //   color: #EF5C48;
   // }
   button, input, .button {
-    font-size: 2.5em;
-    margin: 1.5em 0 0 0;
-    background-color: white;
-    color: #EF5C48;
-    padding: .3em .6em;
-    border-radius: 5em;
-    min-width: 60%;
+    font-size: 1.5em;
+    margin: .5em 0 0 0;
+    background-color: #EF5C48;
+    color: white;
+    padding: .1em .6em;
+    min-width: 100%;
     margin-bottom: .4em;
-    border: 1px solid red;
-    border-radius: 10px;
+    // border: 1px solid #EF5C48;
+    border-radius: 2px;
+    font-family: 'Courgette';
 
     &:hover {
-      background-color: red;
-      color: white;
+      background-color: white;
+      color: #EF5C48;
       cursor: pointer;
     }
   }
