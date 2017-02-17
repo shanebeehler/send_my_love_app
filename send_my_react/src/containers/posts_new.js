@@ -3,17 +3,21 @@ import { connect } from 'react-redux';
 import { createPost } from '../actions/index';
 import {hashHistory} from 'react-router';
 import axios from 'axios';
+import { config } from '../../config.js';
+
+const API_KEY  = config.geocode_api_key;
 
 class PostsNew extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(event);
-    // creatPost(props);
+    console.log(this.props.location[2]);
     axios.post('http://localhost:3000/posts/', {
     name: this.props.name,
     city: this.props.location[0],
-    country: this.props.location[1]
+    country: this.props.location[1],
+    lat: this.props.location[2].lat,
+    lng: this.props.location[2].lng
   })
   .then(function (response) {
     console.log(response);

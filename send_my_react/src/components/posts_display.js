@@ -19,13 +19,8 @@ const PostsDisplay = ({posts}) => {
   }
 
   return (
-    <div>
-      <div className="main">
-      </div>
-      <h3>Send My Love</h3>
-      <div className="love-chain">
-        {renderPosts()}
-      </div>
+    <div className="love-chain">
+      {renderPosts()}
     </div>
   );
 }
