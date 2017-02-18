@@ -13,11 +13,12 @@ class PostsNew extends React.Component {
     event.preventDefault();
     console.log(this.props.location[2]);
     axios.post('http://localhost:3000/posts/', {
-    name: this.props.name,
-    city: this.props.location[0],
+    user_id: this.props.facebookObject.id,
+    name:    this.props.facebookObject.name,
+    city:    this.props.location[0],
     country: this.props.location[1],
-    lat: this.props.location[2].lat,
-    lng: this.props.location[2].lng
+    lat:     this.props.location[2].lat,
+    lng:     this.props.location[2].lng
   })
   .then(function (response) {
     console.log(response);
@@ -32,7 +33,7 @@ class PostsNew extends React.Component {
     return (
         <form className="love-form" onSubmit={this.handleSubmit.bind(this)}>
           <label>
-            {this.props.name}
+            {this.props.facebookObject.name}
           </label>
           <label>in</label>
           <label>

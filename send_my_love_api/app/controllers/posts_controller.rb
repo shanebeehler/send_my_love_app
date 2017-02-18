@@ -31,6 +31,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def user_profile
+    @user_history = Post.where("user_id = ?", params[:user_id]).order("created_at desc")
+    render json: @user_history
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -39,6 +44,6 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:name, :city, :country, :lat, :lng)
+      params.require(:post).permit(:user_id, :name, :city, :country, :lat, :lng)
     end
 end

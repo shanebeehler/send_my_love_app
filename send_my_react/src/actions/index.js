@@ -2,11 +2,11 @@ import axios from 'axios';
 import haversine from 'haversine-distance';
 import { config } from '../../config.js';
 
-export const FETCH_POSTS   = 'FETCH_POSTS';
-export const CREATE_POST   = 'CREATE_POST';
-export const SHOW_POSITION = 'SHOW_POSITION';
-export const FACEBOOK_NAME = 'FACEBOOK_NAME';
-export const FETCH_STATS   = 'FETCH_STATS';
+export const FETCH_POSTS     = 'FETCH_POSTS';
+export const CREATE_POST     = 'CREATE_POST';
+export const SHOW_POSITION   = 'SHOW_POSITION';
+export const FACEBOOK_OBJECT = 'FACEBOOK_OBJECT';
+export const FETCH_STATS     = 'FETCH_STATS';
 
 const API_KEY  = config.geocode_api_key;
 const ROOT_URL = 'http://localhost:3000/posts/';
@@ -56,9 +56,9 @@ export function fetchStats() {
   }
 }
 
-export function facebookName(response) {
+export function facebookObject(response) {
   return {
-    type: FACEBOOK_NAME,
+    type: FACEBOOK_OBJECT,
     payload: response
   }
 }

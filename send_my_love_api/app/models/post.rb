@@ -10,7 +10,7 @@ class Post < ApplicationRecord
   scope :count_all,         -> { count(:all) }
   scope :count_per_city,    -> { group(:city).count }
   scope :count_per_country, -> { group(:country).count }
-  scope :person_count,      -> { distinct.count(:name) }
+  scope :person_count,      -> { distinct.count(:user_id) }
 
   def calculate_distance_from_last_city
     prev_lat = Post.last.lat

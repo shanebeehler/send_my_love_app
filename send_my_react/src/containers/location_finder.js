@@ -20,7 +20,7 @@ class LocationFinder extends Component {
   }
 
   render() {
-    if (this.props.name === "Name") {
+    if (this.props.facebookObject === "Name") {
       return (
         <Welcome />
       );
@@ -28,7 +28,7 @@ class LocationFinder extends Component {
     else {
       return(
         <div className="form-wrap">
-          <PostsNew name={this.props.name} location={this.props.location} />
+          <PostsNew facebookObject={this.props.facebookObject} location={this.props.location} />
         </div>
       );
     }
@@ -37,7 +37,7 @@ class LocationFinder extends Component {
 
 function mapStateToProps(state) {
   return {
-    name: state.name,
+    facebookObject: state.facebookObject,
     location: state.location
   }
 }

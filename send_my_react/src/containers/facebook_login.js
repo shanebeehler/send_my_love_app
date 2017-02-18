@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FacebookLoginDisplay from '../components/facebook_login_display';
-import { facebookName } from '../actions/index';
+import { facebookObject } from '../actions/index';
 
 class FacebookLogin extends React.Component {
   componentDidMount() {
@@ -19,12 +19,12 @@ class FacebookLogin extends React.Component {
       FB.Event.subscribe('auth.statusChange', (response) => {
         if (response.authResponse) {
           FB.api('/me', (response) => {
-            this.props.facebookName(response);
+            this.props.facebookObject(response);
             // this.setState({name: response.name});
           });
         } else {
           const name = { name: "Name" }
-          this.props.facebookName(name);
+          this.props.facebookObject(name);
           console.log('User cancelled login or did not fully authorize.');
         }
       });
@@ -67,7 +67,7 @@ class FacebookLogin extends React.Component {
 
 function mapDispatchToProps(dispatch) {
 
-  return bindActionCreators({ facebookName: facebookName }, dispatch)
+  return bindActionCreators({ facebookObject: facebookObject }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(FacebookLogin);

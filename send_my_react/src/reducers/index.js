@@ -5,10 +5,10 @@ import FacebookReducer from './reducer_facebook';
 import StatsReducer from './reducer_stats';
 
 const rootReducer = combineReducers({
-  posts:    PostsReducer,
-  name:     FacebookReducer,
-  location: LocationReducer,
-  stats:    StatsReducer
+  posts:          PostsReducer,
+  facebookObject: FacebookReducer,
+  location:       LocationReducer,
+  stats:          StatsReducer
 });
 
 export default rootReducer;

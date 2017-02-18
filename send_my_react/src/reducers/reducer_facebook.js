@@ -1,10 +1,11 @@
-import { FACEBOOK_NAME } from '../actions/index';
+import { FACEBOOK_OBJECT } from '../actions/index';
 
 export default function(state = "Name", action) {
   switch(action.type) {
-  case FACEBOOK_NAME:
-    var name = action.payload.name;
-    return name;
+  case FACEBOOK_OBJECT:
+    var facebookObject = action.payload;
+    console.log(action.payload);
+    return facebookObject;
   default:
     return state;
   }
