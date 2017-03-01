@@ -7,7 +7,6 @@ const App = (props) => {
   return (
     <div>
       {/* <LocationFinder /> */}
-      <FacebookLogin />
       <NavBar />
       <div className="app">
         {props.children}

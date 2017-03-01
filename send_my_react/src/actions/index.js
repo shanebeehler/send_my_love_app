@@ -7,9 +7,11 @@ export const CREATE_POST     = 'CREATE_POST';
 export const SHOW_POSITION   = 'SHOW_POSITION';
 export const FACEBOOK_OBJECT = 'FACEBOOK_OBJECT';
 export const FETCH_STATS     = 'FETCH_STATS';
+export const FETCH_PROFILE   = 'FETCH_PROFILE'
 
 const API_KEY  = config.geocode_api_key;
 const ROOT_URL = 'http://localhost:3000/posts/';
+const PROFILE_URL = 'http://localhost:3000/';
 
 export function fetchPosts() {
   const request = axios.get(`${ROOT_URL}`);
@@ -52,6 +54,15 @@ export function fetchStats() {
 
   return {
     type: FETCH_STATS,
+    payload: request
+  }
+}
+
+export function fetchProfile(userId) {
+  const request = axios.get(`${PROFILE_URL}${userId}`);
+
+  return {
+    type: FETCH_PROFILE,
     payload: request
   }
 }

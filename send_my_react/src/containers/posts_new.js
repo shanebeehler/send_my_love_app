@@ -22,7 +22,7 @@ class PostsNew extends React.Component {
   })
   .then(function (response) {
     console.log(response);
-    hashHistory.push('/posts');
+    hashHistory.push('/profile');
   })
   .catch(function (error) {
     console.log(error);

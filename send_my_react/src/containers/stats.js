@@ -14,10 +14,11 @@ class Stats extends Component {
     return (
       <div>
         <div className="stats">
-          <StatsDisplay title="times passed"    stats={this.props.stats} count={2}/>
-          <StatsDisplay title="total people"    stats={this.props.stats} count={5}/>
-          <StatsDisplay title="total cities"    stats={this.props.stats} count={0}/>
-          <StatsDisplay title="total countries" stats={this.props.stats} count={1}/>
+          <StatsDisplay title="total distance(km)" stats={this.props.stats} count={6}/>
+          <StatsDisplay title="times passed"       stats={this.props.stats} count={2}/>
+          <StatsDisplay title="total people"       stats={this.props.stats} count={5}/>
+          <StatsDisplay title="total cities"       stats={this.props.stats} count={0}/>
+          <StatsDisplay title="total countries"    stats={this.props.stats} count={1}/>
         </div>
       </div>
     );

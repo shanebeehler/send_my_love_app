@@ -3,12 +3,15 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FacebookLoginDisplay from '../components/facebook_login_display';
 import { facebookObject } from '../actions/index';
+import { config } from '../../config.js';
+
+const APP_ID  = config.app_id;
 
 class FacebookLogin extends React.Component {
   componentDidMount() {
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '1317906064955234',
+        appId      : APP_ID,
         cookie     : true,  // enable cookies to allow the server to access
                             // the session
         xfbml      : true,  // parse social plugins on this page
@@ -18,9 +21,8 @@ class FacebookLogin extends React.Component {
 
       FB.Event.subscribe('auth.statusChange', (response) => {
         if (response.authResponse) {
-          FB.api('/me', (response) => {
+          FB.api('/me', {fields: ['name', 'email']},(response) => {
             this.props.facebookObject(response);
-            // this.setState({name: response.name});
           });
         } else {
           const name = { name: "Name" }

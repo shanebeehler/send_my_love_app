@@ -5,7 +5,6 @@ const Welcome = (props) => {
 
   return (
     <div className="welcome">
-      <img src="../../assets/love-background.jpg" />
       <div className="copy-background">
         <div className="copy">
           <h2>Welcome</h2>
@@ -18,7 +17,7 @@ const Welcome = (props) => {
             Breathe in, receive love.
             Breathe out, send love.
           </p>
-          <FacebookLoginDisplay />
+          <FacebookLoginDisplay/>
         </div>
       </div>
     </div>

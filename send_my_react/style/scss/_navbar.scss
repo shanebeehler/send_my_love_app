@@ -39,7 +39,7 @@ nav {
   }
 
   .active {
-    
+
   }
 }
 
@@ -68,15 +68,16 @@ nav {
   right: 0;
   left: 0;
 
-  img {
-    height: auto;
-    left: 0;
-    position: relative;
-    top: 0;
-    height: 100%;
-  }
+  // img {
+  //   height: auto;
+  //   left: 0;
+  //   position: relative;
+  //   top: 0;
+  //   height: 100%;
+  // }
+
   .copy-background {
-    background-color: rgba(purple, 0.8);
+    background-color: rgba(purple, 1);
     color: white;
     position: fixed;
     top: 0;
@@ -87,7 +88,7 @@ nav {
     font-weight: 200;
 
     .copy {
-      margin-top: 30%;
+      // margin-top: 30%;
 
       h2 {
         font-size: 2.5em;
@@ -103,7 +104,8 @@ nav {
 }
 
 .app {
-  position: fixed;
+  // position: fixed;
+  margin-top: 2em;
   bottom: 0;
   height: 92%;
   font-weight: 400;
